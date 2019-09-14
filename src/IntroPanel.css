@@ -1,0 +1,21 @@
+.Table-outer {
+    width: 100%;
+    display: table;
+}
+
+.Table-row {
+    display: table-row;
+}
+
+.Icon {
+    width: 100px;
+    display: table-cell;
+}
+
+.Title {
+    display: table-cell;
+    color: red;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+}
