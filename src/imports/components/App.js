@@ -44,7 +44,7 @@ export default class App extends Component {
         <Message compact >
          <Message.Header align = "center">Disclaimer </Message.Header>
           <p align = "center">
-          SymptoMatic should not substitute an actual medical diagnosis. Use at your discretion.
+          The information provided by SymptoMatic is for general reference only and should not substitute an actual medical diagnosis. Use at your risk. 
         </p>
       </Message>
 
