@@ -10,7 +10,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      symptomPhrase: ''
+      symptomPhrase: '',
     };
   }
 
@@ -73,13 +73,16 @@ export default class App extends Component {
                     },
                     body: JSON.stringify()
                   };
-    alert(url)
-    await fetch(url, options) //, options
-    .then(results => { console.log( results ); })//.json())
-    .catch(err => {
-      alert(err)
-    })
-    alert("Check")
+    let response = await fetch(url, options) //, options
+      .then(results => {
+        console.log( results )
+        return results.json()
+      })
+      .catch(err => {
+        alert(err)
+      })
+    this.state.systemPhrase = response
+    console.log( this.state.systemPhrase )
     return false
   }
 }
