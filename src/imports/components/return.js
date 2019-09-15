@@ -3,7 +3,6 @@ import { Header, Icon, Segment, Form, TextArea, Input, Message, Button } from "s
 //import ChatBox from './chatbox.js';
 
 import './App.css';
-import { async } from 'q';
 //import IntroPanel from './IntroPanel';
 
 export default class Return extends Component {
@@ -21,14 +20,12 @@ export default class Return extends Component {
         else if(status === 'backend-return') return (
             <Segment placeholder>
             <p>{chatLog}</p>
-            <p>{systemPhrase}</p> 
           </Segment>
         );
 
         else if(status === 'user-input') return (
             <Segment placeholder>
-            <p>{chatLog}</p>
-            <p>{userInput}</p> 
+            <p>{chatLog}</p> 
           </Segment>
         );
 

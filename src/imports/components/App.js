@@ -47,7 +47,7 @@ export default class App extends Component {
         
         <Form onSubmit={evt => this.handleClick()}>
           <Input fluid placeholder='Type a messsage...' onChange={evt => this.updateInputValue(evt)}/>
-          <Button>Send</Button>
+          <Button >Send</Button>
         </Form>
         
 
@@ -70,17 +70,17 @@ export default class App extends Component {
  
   updateInputValue(evt) {
     this.setState({
-      //userInput: evt.target.value,
+      userInput: evt.target.value,
       symptomPhrase: evt.target.value,
       //status: 'user-input', 
     })
   }
 
   handleClick = async () => {
-    this.state.userInput = "User:" + this.state.symptomPhrase;
+    this.state.userInput = "User: " + this.state.symptomPhrase + '\n';
     this.state.status = 'user-input';
-    this.state.chatLog = this.state.chatLog + '\n' + this.state.userInput;
-
+    this.state.chatLog = this.state.chatLog + "\n" + this.state.userInput + '\n';
+    //alert(this.state.symptomPhrase)
     let url = "http://127.0.0.1:5000/get/keywords/" + this.state.symptomPhrase;
     let options = {method: 'GET', 
                     headers: {
@@ -97,11 +97,12 @@ export default class App extends Component {
       .catch(err => {
         alert(err)
       })
-    this.state.systemPhrase = response;
+    this.state.systemPhrase = Object.keys(response);
     console.log( this.state.systemPhrase )
-    this.state.systemPhrase = "SymptoMatic:"+ response;
-    this.state.chatLog = this.state.chatLog + '\n' + this.state.systemPhrase;
+    console.log(Object.keys(this.state.systemPhrase))
+    this.state.systemPhrase = "SymptoMatic: "+ this.state.systemPhrase + '\n';
     this.state.status = 'backend-return';
+    this.state.chatLog = this.state.chatLog + '\n' + this.state.systemPhrase + '\n';
     return false
   }
 }
