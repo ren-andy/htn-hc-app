@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Header, Icon, Segment, Form, TextArea, Input, Message, Button } from "semantic-ui-react";
-//import ChatBox from './chatbox.js';
+import Return from "./return";
 
 import './App.css';
 import { async } from 'q';
@@ -10,7 +10,10 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      userInput: '',
       symptomPhrase: '',
+      status: 'no-input',
+      systemPhrase: '',
     };
   }
 
@@ -28,12 +31,17 @@ export default class App extends Component {
           Are you feeling unwell? Unsure if you should see a doctor? Ask away!
         </p>
 
-        <Segment placeholder>
+        {/*<Segment placeholder>
           <Header icon>
             <Icon name="cloud" />
             SymptoMatic will respond when you send a message!
           </Header>
-        </Segment>
+        </Segment> */}
+
+        <Return userInput={this.state.userInput} 
+        symptomPhrase={this.state.symptomPhrase}
+        systemPhrase={this.state.systemPhrase} 
+        status={this.state.status}/> 
         
         <Form onSubmit={evt => this.handleClick()}>
           <Input fluid placeholder='Type a messsage...' onChange={evt => this.updateInputValue(evt)}/>
@@ -41,7 +49,7 @@ export default class App extends Component {
         </Form>
         
 
-        <Message compact >
+        <Message compact color= "red">
          <Message.Header align = "center">Disclaimer </Message.Header>
           <p align = "center">
           The information provided by SymptoMatic is for general reference only and should not substitute an actual medical diagnosis. Use at your risk. 
@@ -57,14 +65,19 @@ export default class App extends Component {
       </div>
     );
   }
-
+ 
   updateInputValue(evt) {
     this.setState({
-      symptomPhrase: evt.target.value
+      //userInput: evt.target.value,
+      symptomPhrase: evt.target.value,
+      //status: 'user-input', 
     })
   }
 
   handleClick = async () => {
+    this.state.userInput = this.state.symptomPhrase;
+    this.state.status = 'user-input';
+
     let url = "http://127.0.0.1:5000/get/keywords/" + this.state.symptomPhrase;
     let options = {method: 'GET', 
                     headers: {
@@ -83,6 +96,7 @@ export default class App extends Component {
       })
     this.state.systemPhrase = response
     console.log( this.state.systemPhrase )
+    this.state.status = 'backend-return'
     return false
   }
 }
