@@ -24,14 +24,14 @@ def get_tasks(phrase):
 
     return phrase
     
-@app.route('/yeet/avery', methods=['POST'])
-def yeet():
-    re = request.json
-    ep = {}
-    for i in range(len(re['name'])):
-        ep['name '+ str(i)] = re['name'][i]
-
-    return jsonify(ep)
+#@app.route('/yeet/avery', methods=['POST'])
+#def yeet():
+#    re = request.json
+#    ep = {}
+#    for i in range(len(re['name'])):
+#        ep['name '+ str(i)] = re['name'][i]
+#
+#    return jsonify(ep)
 
 if __name__ == '__main__':
     app.run(debug=True)
