@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Header, Icon, Segment, Form, TextArea } from "semantic-ui-react";
+import { Header, Icon, Segment, Form, TextArea, Input, Message } from "semantic-ui-react";
 import logo from './logo.svg';
 //import ChatBox from './chatbox.js';
 
@@ -12,7 +12,7 @@ export default class App extends Component {
 
     return (
       <div className="App">
-        <Header size="huge" icon textAlign="center">
+        <Header size="huge" align = "center" /*icon textAlign="center"*/>
           <Icon name="stethoscope" circular />
           <Header.Content>SymptoMatic</Header.Content>
         </Header>
@@ -24,15 +24,26 @@ export default class App extends Component {
         <Segment placeholder>
           <Header icon>
             <Icon name="cloud" />
-            Stats will appear here when you search something!
+            SymptoMatic will respond when you send a message!
           </Header>
         </Segment>
         
-        <Form>
-          <TextArea placeholder='Tell us more' />
-        </Form>
         
+        <Input fluid action='Send' placeholder='Type a messsage...' />
+
+        <Message compact >
+         <Message.Header align = "center">Disclaimer </Message.Header>
+          <p align = "center">
+          SymptoMatic should not substitute an actual medical diagnosis. Use at your discretion.
+        </p>
+      </Message>
+
+        <br>
+        </br>
         <p align="center">Copyright © 2019 Andy Ren, Avery Shum, Darren Tang</p>
+
+
+
       </div>
     );
   }
