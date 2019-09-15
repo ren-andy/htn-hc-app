@@ -8,7 +8,7 @@ import { async } from 'q';
 
 export default class Return extends Component {
     render() {
-        const { userInput, symptomPhrase, systemPhrase, status } = this.props;
+        const { userInput, symptomPhrase, systemPhrase, status, chatLog } = this.props;
 
         if(status === 'no-input') return (
             <Segment placeholder>
@@ -20,13 +20,15 @@ export default class Return extends Component {
          );
         else if(status === 'backend-return') return (
             <Segment placeholder>
-            <p>SymptoMatic: {systemPhrase}</p> 
+            <p>{chatLog}</p>
+            <p>{systemPhrase}</p> 
           </Segment>
         );
 
         else if(status === 'user-input') return (
             <Segment placeholder>
-            <p>User: {userInput}</p> 
+            <p>{chatLog}</p>
+            <p>{userInput}</p> 
           </Segment>
         );
 

@@ -14,6 +14,7 @@ export default class App extends Component {
       symptomPhrase: '',
       status: 'no-input',
       systemPhrase: '',
+      chatLog: '',
     };
   }
 
@@ -41,7 +42,8 @@ export default class App extends Component {
         <Return userInput={this.state.userInput} 
         symptomPhrase={this.state.symptomPhrase}
         systemPhrase={this.state.systemPhrase} 
-        status={this.state.status}/> 
+        status={this.state.status}
+        chatLog={this.state.chatLog}/> 
         
         <Form onSubmit={evt => this.handleClick()}>
           <Input fluid placeholder='Type a messsage...' onChange={evt => this.updateInputValue(evt)}/>
@@ -75,8 +77,9 @@ export default class App extends Component {
   }
 
   handleClick = async () => {
-    this.state.userInput = this.state.symptomPhrase;
+    this.state.userInput = "User:" + this.state.symptomPhrase;
     this.state.status = 'user-input';
+    this.state.chatLog = this.state.chatLog + '\n' + this.state.userInput;
 
     let url = "http://127.0.0.1:5000/get/keywords/" + this.state.symptomPhrase;
     let options = {method: 'GET', 
@@ -94,9 +97,11 @@ export default class App extends Component {
       .catch(err => {
         alert(err)
       })
-    this.state.systemPhrase = response
+    this.state.systemPhrase = response;
     console.log( this.state.systemPhrase )
-    this.state.status = 'backend-return'
+    this.state.systemPhrase = "SymptoMatic:"+ response;
+    this.state.chatLog = this.state.chatLog + '\n' + this.state.systemPhrase;
+    this.state.status = 'backend-return';
     return false
   }
 }
