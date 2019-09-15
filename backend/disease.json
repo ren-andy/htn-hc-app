@@ -1,171 +1,168 @@
 {
-    "chickenpox": [
-      "fever",
-      "blisters",
-      "spots"
-    ],
-
-    "head lice": [
-        "itchy scalp",
-        "scalp infection"
-
-    ],
-
-    "measles": [
-        "runny nose",
-        "cough",
+    "disease": {
+        "chickenpox": [
         "fever",
-        "rash"
-    ],
+        "blisters",
+        "spots"
+        ],
 
-    "hepatitis a": [
-        "nausea",
-        "stomachache",
-        "jaundice"
-    ],
+        "head lice": [
+            "itchy scalp",
+            "scalp infection"
 
-    "influenza": [
-        "fever",
-        "cough",
-        "sore throat",
-        "muscle pain",
-        "headache"
-    ],
+        ],
 
-    "streptococcal sore throat": [
-        "headache",
-        "vomit",
-        "sore throat"
-    ],
+        "measles": [
+            "runny nose",
+            "cough",
+            "fever",
+            "rash"
+        ],
 
-    "conjunctivitis (pink eye)": [
-        "irritation of eye",
-        "redness of eye",
-        "discharge"
-    ],
+        "hepatitis a": [
+            "nausea",
+            "stomachache",
+            "jaundice"
+        ],
 
-    "meningococcal meningitis": [
-        "fever",
-        "headache",
-        "vomit",
-        "rash"
-    ],
+        "influenza": [
+            "fever",
+            "cough",
+            "sore throat",
+            "muscle pain",
+            "headache"
+        ],
 
-    "viral meningitis": [
-        "fever",
-        "headache",
-        "vomit"
-    ],
+        "streptococcal sore throat": [
+            "headache",
+            "vomit",
+            "sore throat"
+        ],
 
-    "mumps": [
-        "jaw pain",
-        "swelling in front of ear",
-        "fever"
-    ]
-}
+        "conjunctivitis (pink eye)": [
+            "irritation of eye",
+            "redness of eye",
+            "discharge"
+        ],
 
-  
+        "meningococcal meningitis": [
+            "fever",
+            "headache",
+            "vomit",
+            "rash"
+        ],
 
+        "viral meningitis": [
+            "fever",
+            "headache",
+            "vomit"
+        ],
 
+        "mumps": [
+            "jaw pain",
+            "swelling in front of ear",
+            "fever"
+        ]
+    },
+    "symptoms": {
+        "fever": [
+            "chickenpox",
+            "measles",
+            "influenza",
+            "meningococcal meningitis",
+            "viral meningitis",
+            "mumps"
+        ],
 
-{
-    "fever": [
-        "chickenpox",
-        "measles",
-        "influenza",
-        "meningococcal meningitis",
-        "viral meningitis",
-        "mumps"
-    ],
+        "blisters": [
+            "chickenpox"
+        ],
 
-    "blisters": [
-        "chickenpox"
-    ],
+        "spots": [
+            "chickenpox"
+        ],
 
-    "spots": [
-        "chickenpox"
-    ],
+        "itchy scalp": [
+            "head lice"
+        ],
 
-    "itchy scalp": [
-        "head lice"
-    ],
+        "scalp infection": [
+            "head lice"
+        ],
 
-    "scalp infection": [
-        "head lice"
-    ],
+        "runny nose": [
+            "measles"
+        ],
 
-    "runny nose": [
-        "measles"
-    ],
+        "cough": [
+            "measles",
+            "influenza"
+        ],
 
-    "cough": [
-        "measles",
-        "influenza"
-    ],
+        "rash": [
+            "measles",
+            "meningococcal meningitis"
+        ],
 
-    "rash": [
-        "measles",
-        "meningococcal meningitis"
-    ],
+        "nausea": [
+            "hepatitis a"
+        ],
 
-    "nausea": [
-        "hepatitis a",
-    ],
+        "stomachache": [
+            "hepatitis a"
+        ],
 
-    "stomachache": [
-        "hepatitis a"
-    ],
+        "jaundice": [
+            "hepatitis a"
+        ],
 
-    "jaundice": [
-        "hepatitis a"
-    ],
+        "sore throat": [
+            "influenza",
+            "streptococcal sore throat"
+        ],
 
-    "sore throat": [
-        "influenza",
-        "streptococcal sore throat"
-    ],
+        "muscle pain": [
+            "influenza"
+        ],
 
-    "muscle pain": [
-        "influenza"
-    ],
+        "headache": [
+            "influenza",
+            "streptococcal sore throat",
+            "meningococcal meningitis",
+            "viral meningitis"
+        ],
 
-    "headache": [
-        "influenza",
-        "streptococcal sore throat",
-        "meningococcal meningitis",
-        "viral meningitis"
-    ],
+        "vomit": [
+            "streptococcal sore throat",
+            "meningococcal meningitis",
+            "viral meningitis"
+        ],
 
-    "vomit": [
-        "streptococcal sore throat",
-        "meningococcal meningitis",
-        "viral meningitis"
-    ],
+        "irritation of eye": [
+            "conjunctivitis (pink eye)"
+        ],
 
-    "irritation of eye": [
-        "conjunctivitis (pink eye)"
-    ],
+        "redness of eye": [
+            "conjunctivitis (pink eye)"
+        ],
 
-    "redness of eye": [
-        "conjunctivitis (pink eye)"
-    ],
+        "discharge": [
+            "conjunctivitis (pink eye)"
+        ],
 
-    "discharge": [
-        "conjunctivitis (pink eye)"
-    ],
+        "jaw pain": [
+            "mumps"
+        ],
 
-    "jaw pain": [
-        "mumps"
-    ],
-
-    "swelling in front of ear": [
-        "mumps"
-    ],
-
+        "swelling in front of ear": [
+            "mumps"
+        ]
+    }
 }
 
 
 
-}
+
+
 
 

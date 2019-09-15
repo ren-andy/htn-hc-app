@@ -1,18 +1,25 @@
 import React, {Component} from 'react';
-import { Header, Icon, Segment, Form, TextArea, Input, Message } from "semantic-ui-react";
-import logo from './logo.svg';
+import { Header, Icon, Segment, Form, TextArea, Input, Message, Button } from "semantic-ui-react";
 //import ChatBox from './chatbox.js';
 
 import './App.css';
+import { async } from 'q';
 //import IntroPanel from './IntroPanel';
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      symptomPhrase: ''
+    };
+  }
+
   render() {
     //console.log("App started in", process.env.NODE_ENV, "environment");
 
     return (
       <div className="App">
-        <Header size="huge" align = "center" color="blue" /*icon textAlign="center"*/>
+        <Header size="huge" align = "center" /*icon textAlign="center"*/>
           <Icon name="stethoscope" circular />
           <Header.Content>SymptoMatic</Header.Content>
         </Header>
@@ -28,11 +35,14 @@ export default class App extends Component {
           </Header>
         </Segment>
         
+        <Form onSubmit={evt => this.handleClick()}>
+          <Input fluid placeholder='Type a messsage...' onChange={evt => this.updateInputValue(evt)}/>
+          <Button>Send</Button>
+        </Form>
         
-        <Input fluid action='Send' placeholder='Type a messsage...' />
 
-        <Message compact color="red" >
-         <Message.Header align = "center" >Disclaimer </Message.Header>
+        <Message compact >
+         <Message.Header align = "center">Disclaimer </Message.Header>
           <p align = "center">
           The information provided by SymptoMatic is for general reference only and should not substitute an actual medical diagnosis. Use at your risk. 
         </p>
@@ -42,9 +52,34 @@ export default class App extends Component {
         </br>
         <p align="center">Copyright © 2019 Andy Ren, Avery Shum, Darren Tang</p>
 
+
+
       </div>
     );
   }
+
+  updateInputValue(evt) {
+    this.setState({
+      symptomPhrase: evt.target.value
+    })
+  }
+
+  handleClick = async () => {
+    let url = "http://127.0.0.1:5000/get/keywords/" + this.state.symptomPhrase;
+    let options = {method: 'GET', 
+                    headers: {
+                      'Accept': 'application/json',
+                      'Content-Type': "application/json"
+                    },
+                    body: JSON.stringify()
+                  };
+    alert(url)
+    await fetch(url, options) //, options
+    .then(results => { console.log( results ); })//.json())
+    .catch(err => {
+      alert(err)
+    })
+    alert("Check")
+    return false
+  }
 }
-
-
