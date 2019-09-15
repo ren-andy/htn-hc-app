@@ -1,0 +1,68 @@
+{
+    "chickenpox": [
+      "fever",
+      "blisters",
+      "spots"
+    ],
+
+    "head lice": [
+        "itchy scalph",
+        "scalp infection"
+
+    ],
+
+    "measles": [
+        "runny nose",
+        "cough",
+        "fever",
+        "rash"
+    ],
+
+    "hepatitis a": [
+        "nausea",
+        "stomach pains",
+        "general sickness",
+        "jaundice"
+    ],
+
+    "influenza": [
+        "fever",
+        "cough",
+        "sore throat",
+        "muscle ache",
+        "headache"
+    ],
+
+    "streptococcal sore throat": [
+        "headache",
+        "vomitting",
+        "sore throat"
+    ],
+
+    "conjunctivitis (pink eye)": [
+        "irritation of eye",
+        "redness of eye",
+        "discharge"
+    ],
+
+    "meningococcal meningitis": [
+        "fever",
+        "headache",
+        "vomit",
+        "rash"
+    ],
+
+    "viral meningitis": [
+        "fever",
+        "headache",
+        "vomit"
+    ],
+
+    "mumps": [
+        "jaw pain",
+        "swelling in front of ear",
+        "fever"
+    ]
+}
+
+  
