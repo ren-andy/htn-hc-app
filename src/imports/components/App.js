@@ -12,7 +12,7 @@ export default class App extends Component {
 
     return (
       <div className="App">
-        <Header size="huge" align = "center" /*icon textAlign="center"*/>
+        <Header size="huge" align = "center" color="blue" /*icon textAlign="center"*/>
           <Icon name="stethoscope" circular />
           <Header.Content>SymptoMatic</Header.Content>
         </Header>
@@ -31,8 +31,8 @@ export default class App extends Component {
         
         <Input fluid action='Send' placeholder='Type a messsage...' />
 
-        <Message compact >
-         <Message.Header align = "center">Disclaimer </Message.Header>
+        <Message compact color="red" >
+         <Message.Header align = "center" >Disclaimer </Message.Header>
           <p align = "center">
           SymptoMatic should not substitute an actual medical diagnosis. Use at your discretion.
         </p>
@@ -41,8 +41,6 @@ export default class App extends Component {
         <br>
         </br>
         <p align="center">Copyright © 2019 Andy Ren, Avery Shum, Darren Tang</p>
-
-
 
       </div>
     );
