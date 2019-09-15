@@ -1,6 +1,8 @@
 ## Symptomatic
 Medical condition self-diagnostic tool
 
+Devpost: [here](https://devpost.com/software/htn-hc-app)
+
 ### Back story 
 As the population increases all around the world, hospital wait times are also increasing correspondingly. We recognized this as one of the pressing issues that plague our society today. 
 
