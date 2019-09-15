@@ -6,7 +6,7 @@
     ],
 
     "head lice": [
-        "itchy scalph",
+        "itchy scalp",
         "scalp infection"
 
     ],
@@ -20,8 +20,7 @@
 
     "hepatitis a": [
         "nausea",
-        "stomach pains",
-        "general sickness",
+        "stomachache",
         "jaundice"
     ],
 
@@ -29,13 +28,13 @@
         "fever",
         "cough",
         "sore throat",
-        "muscle ache",
+        "muscle pain",
         "headache"
     ],
 
     "streptococcal sore throat": [
         "headache",
-        "vomitting",
+        "vomit",
         "sore throat"
     ],
 
@@ -66,3 +65,107 @@
 }
 
   
+
+
+
+{
+    "fever": [
+        "chickenpox",
+        "measles",
+        "influenza",
+        "meningococcal meningitis",
+        "viral meningitis",
+        "mumps"
+    ],
+
+    "blisters": [
+        "chickenpox"
+    ],
+
+    "spots": [
+        "chickenpox"
+    ],
+
+    "itchy scalp": [
+        "head lice"
+    ],
+
+    "scalp infection": [
+        "head lice"
+    ],
+
+    "runny nose": [
+        "measles"
+    ],
+
+    "cough": [
+        "measles",
+        "influenza"
+    ],
+
+    "rash": [
+        "measles",
+        "meningococcal meningitis"
+    ],
+
+    "nausea": [
+        "hepatitis a",
+    ],
+
+    "stomachache": [
+        "hepatitis a"
+    ],
+
+    "jaundice": [
+        "hepatitis a"
+    ],
+
+    "sore throat": [
+        "influenza",
+        "streptococcal sore throat"
+    ],
+
+    "muscle pain": [
+        "influenza"
+    ],
+
+    "headache": [
+        "influenza",
+        "streptococcal sore throat",
+        "meningococcal meningitis",
+        "viral meningitis"
+    ],
+
+    "vomit": [
+        "streptococcal sore throat",
+        "meningococcal meningitis",
+        "viral meningitis"
+    ],
+
+    "irritation of eye": [
+        "conjunctivitis (pink eye)"
+    ],
+
+    "redness of eye": [
+        "conjunctivitis (pink eye)"
+    ],
+
+    "discharge": [
+        "conjunctivitis (pink eye)"
+    ],
+
+    "jaw pain": [
+        "mumps"
+    ],
+
+    "swelling in front of ear": [
+        "mumps"
+    ],
+
+}
+
+
+
+}
+
+
