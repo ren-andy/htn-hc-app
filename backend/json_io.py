@@ -1,8 +1,11 @@
 from flask import Flask, jsonify, request
 import requests
 import os
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 def analyze_text(phrase):
     subscription_key = "b321c4df35534633a4ed9f35ec5e7ae3"
